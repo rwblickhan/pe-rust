@@ -1,4 +1,4 @@
-use std::iter::Iterator;
+use pe_rust::{sieve_of_eratosthenes, Fibonacci};
 
 fn main() {
     println!("Hello, world!");
@@ -9,31 +9,6 @@ fn main() {
 
 fn pe1() -> u64 {
     (0..1000).filter(|x| x % 3 == 0 || x % 5 == 0).sum()
-}
-
-struct Fibonacci {
-    a: u64,
-    b: u64,
-}
-
-impl Fibonacci {
-    fn new(first: u64, second: u64) -> Self {
-        Fibonacci {
-            a: first,
-            b: second,
-        }
-    }
-}
-
-impl Iterator for Fibonacci {
-    type Item = u64;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        let r = self.b;
-        self.b = self.a;
-        self.a += r;
-        Some(r)
-    }
 }
 
 fn pe2() -> u64 {
