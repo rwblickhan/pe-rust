@@ -1,7 +1,6 @@
-use pe_rust::{sieve_of_eratosthenes, Fibonacci};
+use pe_rust::Fibonacci;
 
 fn main() {
-    println!("Hello, world!");
     println!("pe1: {}", pe1());
     println!("pe2: {}", pe2());
     println!("pe3: {}", pe3());

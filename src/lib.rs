@@ -1,4 +1,4 @@
-use std::{collections::HashSet, iter::Iterator};
+use std::iter::Iterator;
 
 pub struct Fibonacci {
     a: u64,
